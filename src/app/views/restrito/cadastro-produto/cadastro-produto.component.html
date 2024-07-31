@@ -1,0 +1,26 @@
+<main>
+    <h1>Cadastrar jogo</h1>
+    <section id="section-cadastro">
+        <form class = "row g-3">
+            <div class="mb-3" id="f-div">
+                <label for="produto" class = "form-label">Nome do Produto</label>
+                <input type="text" class="form-control" name="produto" [(ngModel)] = "produto.nome">
+            </div>
+            <div class="mb-3">
+                <label for="descricao" class = "form-label">Descrição</label>
+                <input type="text" class="form-control" name="descricao" [(ngModel)] = "produto.descricao">
+            </div>
+            <div class="mb-3">
+                <label for="foto" class = "form-label">Foto</label>
+                <input type="text" class="form-control" name="foto" [(ngModel)] = "produto.foto">
+            </div>
+            <div class="mb-3">
+                <label for="preco" class = "form-label">Preço</label>
+                <input type="number" class="form-control" name="preco" [(ngModel)]="produto.preco">
+            </div>
+            <div class="mb-3">
+                <button type="button" class="btn btn-primary mb-3" (click)="cadastrar()">Cadastrar</button>
+            </div>
+        </form>
+    </section>
+</main> 

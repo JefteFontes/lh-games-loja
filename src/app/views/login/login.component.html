@@ -1,17 +1,17 @@
 <main>
     <section id="section-login">
-        <h2>Login</h2>
+        <h2>Login</h2> 
         <form class="row g-3">
             <div class="mb-3">
                 <label for="staticUsuario" class="form-label">Usuário</label>
-                <input type="text" class="form-control" id="staticUsuario" placeholder="name@example.com">
+                <input type="text" name = "usuario" [(ngModel)] = "usuario" required class="form-control" id="staticUsuario" placeholder="name@example.com">
             </div>
             <div class="mb-3">
                 <label for="inputPassword2" class="form-label">Senha</label>
-                <input type="password" class="form-control" id="inputPassword2" placeholder="123456...">
+                <input type="password" name="senha" [(ngModel)] = "senha" required class="form-control" id="inputPassword2" placeholder="123456...">
             </div>
             <div class="mb-3">
-                <button type="submit" class="btn btn-primary mb-3">Entrar</button>
+                <button type="submit" class="btn btn-primary mb-3" (click)="fazerLogin()">Entrar</button>
             </div>
         </form>
     </section>

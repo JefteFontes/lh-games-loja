@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './views/inicio/inicio.component';
 import { LoginComponent } from './views/login/login.component';
+import { RestritoComponent } from './views/restrito/restrito.component';
+import { GuardGuard } from './guard.guard';
 
 const routes: Routes = [
   {
@@ -13,10 +15,14 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
+    path: 'restrito',
+    component: RestritoComponent, canActivate: [GuardGuard]
+  },
+  {
     path: '',
     redirectTo: '/inicio',
     pathMatch: 'full'
-  }
+  },
 ];
 
 @NgModule({
